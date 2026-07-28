@@ -41,7 +41,7 @@ service cloud.firestore {
 
     // Lessons
     match /lessons/{lessonId} {
-      allow read: if resource.data.type == 'free' || isAuthenticated();
+      allow read: if true;
       allow create, update, delete: if isAdmin();
     }
 

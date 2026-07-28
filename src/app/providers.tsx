@@ -35,17 +35,17 @@ export const Providers = ({ children }: { children: ReactNode }) => {
   return (
     <ThemeProvider>
       <LangProvider>
-        <SiteSettingsProvider>
-          <CategoriesProvider>
-            <LessonsProvider>
-          <AuthProvider>
-            {children}
-            <ToastWrapper />
-            <HeadUpdater />
-          </AuthProvider>
-            </LessonsProvider>
-          </CategoriesProvider>
-        </SiteSettingsProvider>
+        <AuthProvider>
+          <SiteSettingsProvider>
+            <CategoriesProvider>
+              <LessonsProvider>
+                {children}
+                <ToastWrapper />
+                <HeadUpdater />
+              </LessonsProvider>
+            </CategoriesProvider>
+          </SiteSettingsProvider>
+        </AuthProvider>
       </LangProvider>
     </ThemeProvider>
   );
